@@ -1,0 +1,166 @@
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #faf7f2;
+  color: #2e2e2e;
+}
+
+/* Navegación */
+.nav {
+  padding: 30px 60px;
+  text-align: right;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #2e2e2e;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #d97706;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: #d97706;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Catálogo */
+.catalogo {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.catalogo-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2e2e2e;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Carrusel de categorías */
+.categorias-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0 40px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.categoria {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  background-color: #fff;
+  border: 1px solid #dcd7d0;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 500;
+  color: #2e2e2e;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.categoria:hover {
+  background-color: #d97706;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.categorias-carousel::-webkit-scrollbar {
+  display: none;
+}
+.categorias-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Productos */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.producto {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.producto h3 {
+  font-size: 1.2rem;
+  color: #2e2e2e;
+  margin-bottom: 10px;
+}
+
+.precio {
+  font-size: 1rem;
+  color: #d97706;
+  font-weight: bold;
+}
+
+/* Botón Comprar */
+.btn-comprar {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #25D366;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #1ebe5d;
+  transform: scale(1);
+}

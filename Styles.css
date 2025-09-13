@@ -1,0 +1,252 @@
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #faf7f2;
+  color: #2e2e2e;
+}
+
+/* Navegación */
+.nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 30px 60px;
+  z-index: 10;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #2e2e2e;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #d97706;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: #d97706;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero principal */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 60px;
+  background-color: #faf7f2;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  gap: 60px;
+}
+
+/* Texto */
+.text-section {
+  flex: 1;
+}
+
+.text-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #2e2e2e;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.text-section p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #6b6b6b;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+.btn {
+  background-color: #d97706;
+  color: #fff;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+.btn:hover {
+  background-color: #b45309;
+  transform: scale(1.05);
+}
+
+/* Imagen */
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-section img:hover {
+  transform: scale(1.03);
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .nav {
+    position: static;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+    height: auto;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .text-section h1 {
+    font-size: 2.2rem;
+  }
+
+  .text-section p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+  }
+
+  .image-section img {
+    max-width: 90%;
+  }
+
+  .footer-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #f0ece6;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #dcd7d0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  color: #6b6b6b;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-btn {
+  background-color: #d97706;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.footer-btn:hover {
+  background-color: #b45309;
+  transform: scale(1.05);
+}
+
+.footer-btn.whatsapp {
+  background-color: #25D366;
+}
+
+.footer-btn.whatsapp:hover {
+  background-color: #1ebe5d;
+}
